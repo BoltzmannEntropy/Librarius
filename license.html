@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>License — Librarius</title>
-  <meta name="description" content="Business Source License 1.1 for Librarius.">
+  <title>License — HardEvidence</title>
+  <meta name="description" content="Licensing overview for HardEvidence source code and binary distribution.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -181,14 +181,28 @@
 .modern-footer .footer-email {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--footer-border, #e5ded5);
+  background: var(--footer-pill, #ffffff);
   color: var(--text, #2b2b2b);
-  font-weight: 500;
   text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.modern-footer .footer-email svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
 }
 
 .modern-footer .footer-email:hover {
   color: var(--accent, #2563eb);
+  border-color: var(--accent, #2563eb);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
 }
 
 .modern-footer .footer-col h4 {
@@ -265,6 +279,16 @@
   color: #e2e8f0;
 }
 
+[data-theme="dark"] .modern-footer .footer-email {
+  background: #0f172a;
+  border-color: #1f2a3a;
+}
+
+[data-theme="dark"] .modern-footer .footer-email:hover {
+  border-color: #334155;
+  color: #f8fafc;
+}
+
 [data-theme="dark"] .modern-footer .footer-desc,
 [data-theme="dark"] .modern-footer .footer-bottom,
 [data-theme="dark"] .modern-footer .footer-col h4 {
@@ -318,17 +342,27 @@
   </div>
 
   <div class="container">
-    <a href="index.html" class="back-link">&larr; Back to Librarius</a>
+    <a href="index.html" class="back-link">&larr; Back to HardEvidence</a>
 
-    <h1>Business Source License 1.1</h1>
-    <p class="subtitle">License for Librarius</p>
+    <h1>Licensing Overview</h1>
+    <p class="subtitle">Source code and binary distribution terms for HardEvidence</p>
+
+    <p>HardEvidence is source-available under a BSL-style license. Source code use is
+    allowed, while the official binary distribution has stricter terms.</p>
+
+    <h2>Source Code License (BSL 1.1)</h2>
+    <p>The Business Source License 1.1 applies to the HardEvidence source code. Production
+    use is permitted under the Additional Use Grant.</p>
     <pre class="license-text">Business Source License 1.1
+
+Copyright (C) 2017 MariaDB Corporation Ab, All Rights Reserved.
+"Business Source License" is a trademark of MariaDB Corporation Ab.
 
 Parameters
 Licensor: QNeura.ai
-Licensed Work: Librarius
-Additional Use Grant: None
-Change Date: 2029-01-01
+Licensed Work: HardEvidence Source Code
+Additional Use Grant: You may use the Licensed Work for any purpose, including production use.
+Change Date: 2030-02-01
 Change License: GPL-2.0-or-later
 
 Terms
@@ -379,6 +413,10 @@ as long as you comply with the Covenants of Licensor below.
 
 Covenants of Licensor
 
+In consideration of the right to use this License's text and the "Business
+Source License" name and trademark, Licensor covenants to MariaDB, and to all
+other recipients of the licensed work to be provided by Licensor:
+
 1. To specify as the Change License the GPL Version 2.0 or any later version,
    or a license that is compatible with GPL Version 2.0 or a later version,
    where "compatible" means that software provided under the Change License can
@@ -395,7 +433,43 @@ Covenants of Licensor
 4. Not to modify this License in any other way.
 </pre>
 
-    <p class="last-updated">Last updated: February 2026</p>
+    <h2>Binary Distribution License</h2>
+    <p>The official DMG/executable binaries are governed by a separate Binary Distribution
+    License. Commercial use or redistribution of the Binary is not allowed.</p>
+    <pre class="license-text">Binary Distribution License
+
+This Binary Distribution License ("License") governs use of the compiled
+binary distribution for HardEvidence (the "Binary"), including DMG, EXE, and
+app bundles.
+
+1. License Grant
+You may install and use the Binary for personal or internal evaluation use.
+
+2. Restrictions
+You may not sell, rent, sublicense, or redistribute the Binary.
+You may not use the Binary for any commercial offering or commercial purpose.
+
+3. Source Code
+Source code is licensed separately under the Business Source License 1.1.
+See LICENSE for details.
+
+4. No Warranty
+THE BINARY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+5. Limitation of Liability
+IN NO EVENT SHALL QNEURA.AI BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY ARISING FROM THE USE OF THE BINARY.
+
+6. Contact
+If you need commercial binary distribution rights, contact solomon@qneura.ai.
+</pre>
+
+    <h2>Need Commercial Rights?</h2>
+    <p>Contact solomon@qneura.ai for commercial binary licensing.</p>
+
+    <p class="last-updated">Last updated: March 2026</p>
   </div>
   <script>
     (function() {
@@ -426,10 +500,15 @@ Covenants of Licensor
         <div class="footer-brand">
           <div class="footer-logo">
             <span class="footer-mark">L</span>
-            <span class="footer-name">Librarius</span>
+            <span class="footer-name">HardEvidence</span>
           </div>
           <p class="footer-desc">Investigation workspace for the Epstein files with search and timeline analysis.</p>
-          <a class="footer-email" href="mailto:solomon@qneura.ai">solomon@qneura.ai</a>
+          <a class="footer-email" href="mailto:solomon@qneura.ai" aria-label="Email solomon@qneura.ai">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16v10H4z" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="m4 8 8 6 8-6" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
         </div>
         <div class="footer-col">
           <h4>Product</h4>
@@ -443,7 +522,7 @@ Covenants of Licensor
         <div class="footer-col">
           <h4>Support</h4>
           <ul class="footer-links">
-          <li><a href="https://github.com/BoltzmannEntropy/Librarius" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/BoltzmannEntropy/HardEvidence" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="mailto:solomon@qneura.ai">Contact</a></li>
           </ul>
         </div>
@@ -457,7 +536,7 @@ Covenants of Licensor
         </div>
       </div>
       <div class="footer-bottom">
-        <div>&copy; 2026 Librarius. All rights reserved.</div>
+        <div>&copy; 2026 HardEvidence. All rights reserved.</div>
         <div>Made with &hearts; for investigators everywhere. <a href="https://qneura.ai/apps.html" target="_blank" rel="noopener">QNeura.ai</a></div>
         <div class="footer-badges">
         <span class="footer-badge">macOS</span>
